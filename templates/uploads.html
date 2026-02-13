@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Uploaded Files</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>📂 Uploaded Files</h1>
+
+    {% if files %}
+      <table>
+        <thead>
+          <tr>
+            <th>File Name</th>
+            <th>Download</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for file in files %}
+          <tr>
+            <td>{{ file }}</td>
+            <td>
+              <a href="{{ url_for('download_file', filename='uploads/' + file) }}" class="download-btn">⬇️ Download</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No files found in uploads folder.</p>
+    {% endif %}
+
+    <a href="/" class="back-btn">⬅️ Back to Home</a>
+  </div>
+</body>
+</html>

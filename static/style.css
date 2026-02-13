@@ -1,0 +1,164 @@
+body {
+  background: linear-gradient(to right, #141e30, #243b55);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  text-align: center;
+  padding-top: 50px;
+  
+
+  .container {
+    width: 70%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+input[type="file"] {
+  margin: 20px 0;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+button {
+  background: #00c6ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0072ff;
+}
+
+.output {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #28a745;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background: #218838;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.file-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#file-name {
+  margin-top: 8px;
+  color: #00ffb3;
+  font-weight: bold;
+}
+
+
+
+@media  screen and (max-width: 420px) {
+  .container {
+    width: 90%;
+    padding: auto;
+    text-align: center;
+    
+  }
+  .h1 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  .input[type="file"] {
+  margin: 20px ;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+}
+
+@media  screen and (max-width: 390px) {
+  .container {
+    width: 90%;
+    padding: auto;
+    text-align: center;
+    
+  }
+  .h1 {
+    font-size: 0.5rem;
+    margin-bottom: 20px;
+  }
+  .input[type="file"] {
+  margin: 10px ;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+}
+
+
+
+
+/* for the uplods.html page  */
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+th {
+  background: rgba(0, 255, 200, 0.2);
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #0072ff;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #00c6ff;
+}

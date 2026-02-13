@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Data Deduplication Web App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 Data Deduplication using Machine Learning</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <div class="file-input-container">
+        <label for="file">Choose CSV file:</label><br>
+        <input type="file" id="file" name="file" accept=".csv" required onchange="showFileName()">
+        <span id="file-name">No file chosen</span>
+      </div><br>
+
+      <label for="filename">Enter output file name:</label><br>
+      <input type="text" id="filename" name="filename" placeholder="e.g., deduped_output.csv" required><br><br>
+
+      <button type="submit">Upload & Run</button>
+    </form>
+    <p><a href="/uploads" class="download-btn">📁 View Uploaded Files</a></p>
+
+
+    {% if output %}
+      <div class="output">
+        <h2>{{ output }}</h2>
+        <p>⏱ Time taken: {{ time_taken }} seconds</p>
+        <a href="/download/{{ file_download }}" class="download-btn">⬇️ Download Clean CSV</a>
+      </div>
+    {% endif %}
+  </div>
+  <script>
+  function showFileName() {
+    const fileInput = document.getElementById('file');
+    const fileNameDisplay = document.getElementById('file-name');
+    const fileName = fileInput.files.length ? fileInput.files[0].name : 'No file chosen';
+    fileNameDisplay.textContent = fileName;
+  }
+  </script>
+
+</body>
+</html>
