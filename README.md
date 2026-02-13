@@ -73,6 +73,5 @@ The project works with structured datasets such as:
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/data-deduplication-ml.git
-cd data-deduplication-ml
+https://github.com/chetan-p-d/Data_dedupliaction_using_ml.git
 
